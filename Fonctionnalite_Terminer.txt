@@ -1,0 +1,9 @@
+User=
+-Create User
+-Get User By Id/*
+
+
+
+
+Teacher= 
+-Create Teacher
