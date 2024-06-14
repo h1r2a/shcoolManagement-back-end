@@ -1,5 +1,6 @@
 package harena.dev.banking.controller;
 
+import harena.dev.banking.config.CustomRole;
 import harena.dev.banking.dto.requestDto.CourseRequestDto;
 import harena.dev.banking.dto.requestDto.UserRequestDto;
 import harena.dev.banking.dto.responseDto.CourseResponseDto;
@@ -21,6 +22,7 @@ public class CourseController {
     private CourseService courseService;
 
     @PostMapping
+    @CustomRole({"admin"})
     public ResponseEntity<Object> createUser(@RequestBody CourseRequestDto courseRequestDto) {
         CourseResponseDto course = courseService.createCourse(courseRequestDto);
         return new ResponseEntity<>(course, HttpStatus.CREATED);

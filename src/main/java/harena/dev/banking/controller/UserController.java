@@ -21,6 +21,13 @@ public class UserController {
         UserResponseDto userResponseDto = userService.createUser(userRequestDto);
         return  ResponseEntity.ok(userResponseDto);
     }
+
+    @PostMapping("/authenticate")
+    public ResponseEntity<Object> authenticateUser(@RequestBody UserRequestDto userRequestDto){
+        String token = userService.authenticate(userRequestDto);
+        return ResponseEntity.ok(token);
+    }
+
     @GetMapping(path = "/{id}")
     public ResponseEntity<Object> getUserById(@PathVariable Long id){
         UserResponseDto userResponseDto = userService.getUserById(id);

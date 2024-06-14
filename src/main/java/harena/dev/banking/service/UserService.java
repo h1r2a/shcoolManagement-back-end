@@ -13,4 +13,5 @@ public interface UserService {
      UserResponseDto getUserById(Long id);
 
     List<UserResponseDto> getAllUser();
+    String authenticate(UserRequestDto userRequestDto);
 }

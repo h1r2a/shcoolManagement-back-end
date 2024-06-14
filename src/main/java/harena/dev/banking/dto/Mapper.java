@@ -59,6 +59,7 @@ public class Mapper {
         studentResponseDto.setFirstName(student.getFirstName());
         studentResponseDto.setLastName(student.getLastName());
         studentResponseDto.setLevel(student.getLevel());
+        studentResponseDto.setUserId(student.getUser().getId());
         studentResponseDto.setCourse(courseToResponseDtos(student.getCourseList()));
         return studentResponseDto;
 

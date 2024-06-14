@@ -1,8 +1,10 @@
 User=
 -Create User
 -Get User By Id/*
+-Authentication*retour de JWT
 
-
+Securite
+-Creation d'une annotation Custom pour gerer les permissions.
 
 
 Teacher= 
