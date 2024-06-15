@@ -13,6 +13,8 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/api/course")
@@ -23,22 +25,40 @@ public class CourseController {
 
     @PostMapping
     @CustomRole({"admin"})
-    public ResponseEntity<Object> createUser(@RequestBody CourseRequestDto courseRequestDto) {
+    public ResponseEntity<Object> createCourse(@RequestBody CourseRequestDto courseRequestDto) {
         CourseResponseDto course = courseService.createCourse(courseRequestDto);
         return new ResponseEntity<>(course, HttpStatus.CREATED);
     }
 
 
+    @PostMapping("/addStudent")
+    public ResponseEntity<Object> addStudents(@RequestBody Map<String, Object> courseIdAndStudentIds) {
+        CourseResponseDto courseResponseDto = courseService.addStudent(courseIdAndStudentIds);
+        return ResponseEntity.ok(courseResponseDto);
+    }
+
     @GetMapping
-    public  ResponseEntity<Object> getAllCourse(){
+    public ResponseEntity<Object> getAllCourse() {
         List<CourseResponseDto> courses = courseService.getAllCourse();
         return ResponseEntity.ok(courses);
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity<Object> getUserById(@PathVariable Long id){
+    public ResponseEntity<Object> geCourseById(@PathVariable Long id) {
         CourseResponseDto course = courseService.getCourseByID(id);
         return ResponseEntity.ok(course);
+    }
+    @PostMapping("/test")
+    public ResponseEntity<Object> testMap(@RequestBody Map<String,Object> body){
+        Long id =( (Number) body.get("courseId")).longValue();
+        //List<Long> idList = (List<Long>) body.get("studentIds");
+        List<Long> idList = ((List<?>) body.get("studentIds")).stream()
+                .map(number -> ((Number) number).longValue())
+                .collect(Collectors.toList());
+
+        System.out.println("voici l'Id "+id );
+        System.out.println("voici les Id "+idList);
+        return ResponseEntity.ok(idList);
     }
 
 

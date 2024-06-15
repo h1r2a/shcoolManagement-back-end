@@ -1,8 +1,11 @@
 package harena.dev.banking.dto.requestDto;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class StudentRequestDto {
     private String firstName;
     private String lastName;

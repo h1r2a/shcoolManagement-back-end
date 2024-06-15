@@ -11,6 +11,7 @@ import harena.dev.banking.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Mapper {
 
@@ -39,7 +40,7 @@ public class Mapper {
         courseResponseDto.setDescription(course.getDescription());
         courseResponseDto.setDuration(course.getDuration());
         courseResponseDto.setTeacherName(course.getTeacher().getFirstName()+" "+course.getTeacher().getLastName());
-        courseResponseDto.setStudents(studentToResponseDtos(course.getStudentList()));
+        courseResponseDto.setStudents(course.getStudentList().stream().map(Student::getFirstName).collect(Collectors.toList()));
         return courseResponseDto;
     }
 
@@ -60,7 +61,11 @@ public class Mapper {
         studentResponseDto.setLastName(student.getLastName());
         studentResponseDto.setLevel(student.getLevel());
         studentResponseDto.setUserId(student.getUser().getId());
-        studentResponseDto.setCourse(courseToResponseDtos(student.getCourseList()));
+        studentResponseDto.setCourse(
+                student.getCourseList().stream()
+                        .map(Course::getName)  // Mappage des cours en noms de cours
+                        .collect(Collectors.toList())
+        );
         return studentResponseDto;
 
     }

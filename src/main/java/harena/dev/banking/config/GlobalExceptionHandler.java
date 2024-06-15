@@ -11,11 +11,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Object> handleRuntimeException(RuntimeException ex, WebRequest request) {
+        System.out.println(ex);
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleGlobalException(Exception ex, WebRequest request) {
+        System.out.println(ex);
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

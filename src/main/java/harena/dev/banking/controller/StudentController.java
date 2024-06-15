@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/etudiant")
 public class StudentController {
@@ -19,6 +21,16 @@ public class StudentController {
     public ResponseEntity<Object> createStudent(@RequestBody StudentRequestDto studentRequestDto){
         StudentResponseDto studentResponseDto = studentService.createStudent(studentRequestDto);
         return new ResponseEntity<>(studentResponseDto, HttpStatus.CREATED);
+    }
+    @GetMapping
+    public ResponseEntity<Object> getAllStudent(){
+        List<StudentResponseDto> studentResponseDtos = studentService.getAllStundets();
+        return new ResponseEntity<>(studentResponseDtos,HttpStatus.OK);
+    }
+    @GetMapping("/{studentId}")
+    public ResponseEntity<Object> getStudentById(@PathVariable Long studentId){
+        StudentResponseDto studentResponseDto = studentService.getStudentById(studentId);
+        return new ResponseEntity<>(studentResponseDto,HttpStatus.OK);
     }
 
 }

@@ -1,8 +1,11 @@
 package harena.dev.banking.dto.responseDto;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserResponseDto {
     private Long id ;
     private String email;

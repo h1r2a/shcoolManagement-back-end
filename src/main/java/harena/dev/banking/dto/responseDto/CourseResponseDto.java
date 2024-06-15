@@ -10,12 +10,12 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+
 public class CourseResponseDto {
     private Long id;
     private String name;
     private int duration;
     private String description;
     private String teacherName;
-    private List<StudentResponseDto> students = new ArrayList<>();
+    private List<String> students = new ArrayList<>();
 }

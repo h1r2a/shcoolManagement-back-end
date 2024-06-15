@@ -1,11 +1,14 @@
 package harena.dev.banking.dto.responseDto;
 
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class TeacherResponseDto {
     private Long id;
     private String firstName;

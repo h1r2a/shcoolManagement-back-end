@@ -9,3 +9,8 @@ Securite
 
 Teacher= 
 -Create Teacher
+
+Course=
+-Create Course
+-get Course*By id
+-Add to student to a course
