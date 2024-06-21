@@ -53,7 +53,8 @@ public class CourseServiceImpl implements CourseService {
     public List<CourseResponseDto> getAllCourse() {
         List<CourseResponseDto> courses = new ArrayList<>();
         List<Course> courseList = courseRepository.findAll();
-        return Mapper.courseToResponseDtos(courseList);
+        List<CourseResponseDto> courseDtos = Mapper.courseToResponseDtos(courseList);
+        return  courseDtos;
     }
 
 /*    @Override

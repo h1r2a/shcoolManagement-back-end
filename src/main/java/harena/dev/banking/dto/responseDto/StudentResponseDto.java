@@ -14,6 +14,7 @@ public class StudentResponseDto {
     private String firstName;
     private String lastName;
     private String level;
+    private String email;
     private Long userId;
     private List<String> course;
 

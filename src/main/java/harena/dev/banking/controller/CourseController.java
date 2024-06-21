@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping(path = "/api/course")
 public class CourseController {
@@ -24,7 +24,7 @@ public class CourseController {
     private CourseService courseService;
 
     @PostMapping
-    @CustomRole({"admin"})
+    @CustomRole({"ROLE_ADMIN"})
     public ResponseEntity<Object> createCourse(@RequestBody CourseRequestDto courseRequestDto) {
         CourseResponseDto course = courseService.createCourse(courseRequestDto);
         return new ResponseEntity<>(course, HttpStatus.CREATED);

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Introduction to Programming",
+    "duration": 60,
+    "description": "This course covers the basics of programming concepts.",
+    "teacher": {
+      "id": 1
+    }
+  },
+  {
+    "name": "Advanced Mathematics",
+    "duration": 120,
+    "description": "This course covers advanced topics in mathematics.",
+    "teacher": {
+      "id": 2
+    }
+  },
+  {
+    "name": "Data Structures and Algorithms",
+    "duration": 90,
+    "description": "Explore data structures and algorithms in depth.",
+    "teacher": {
+      "id": 3
+    }
+  },
+  {
+    "name": "Web Development Fundamentals",
+    "duration": 75,
+    "description": "Learn essential skills for web development.",
+    "teacher": {
+      "id": 4
+    }
+  },
+  {
+    "name": "Machine Learning Basics",
+    "duration": 100,
+    "description": "Introduction to machine learning concepts and algorithms.",
+    "teacher": {
+      "id": 5
+    }
+  },
+  {
+    "name": "Financial Accounting Principles",
+    "duration": 90,
+    "description": "Fundamentals of financial accounting practices.",
+    "teacher": {
+      "id": 6
+    }
+  },
+  {
+    "name": "Artificial Intelligence Applications",
+    "duration": 120,
+    "description": "Explore real-world applications of artificial intelligence.",
+    "teacher": {
+      "id": 7
+    }
+  },
+  {
+    "name": "Business Ethics and Leadership",
+    "duration": 60,
+    "description": "Study ethical considerations in business and leadership principles.",
+    "teacher": {
+      "id": 8
+    }
+  },
+  {
+    "name": "Digital Marketing Strategies",
+    "duration": 90,
+    "description": "Learn effective digital marketing strategies.",
+    "teacher": {
+      "id": 9
+    }
+  },
+  {
+    "name": "Operations Management",
+    "duration": 80,
+    "description": "Explore principles and strategies in operations management.",
+    "teacher": {
+      "id": 10
+    }
+  },
+  {
+    "name": "Psychology of Human Behavior",
+    "duration": 100,
+    "description": "Study human behavior and psychological theories.",
+    "teacher": {
+      "id": 11
+    }
+  },
+  {
+    "name": "Environmental Science",
+    "duration": 90,
+    "description": "Introduction to environmental science and sustainability.",
+    "teacher": {
+      "id": 12
+    }
+  }
+]

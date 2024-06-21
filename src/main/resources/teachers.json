@@ -1,0 +1,82 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "phoneNumber": "1234567890",
+    "user": {
+      "email": "john.smith@example.com"
+    }
+  },
+  {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "phoneNumber": "2345678901",
+    "user": {
+      "email": "alice.johnson@example.com"
+    }
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Brown",
+    "phoneNumber": "3456789012",
+    "user": {
+      "email": "robert.brown@example.com"
+    }
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "phoneNumber": "4567890123",
+    "user": {
+      "email": "emily.davis@example.com"
+    }
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Wilson",
+    "phoneNumber": "5678901234",
+    "user": {
+      "email": "michael.wilson@example.com"
+    }
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Miller",
+    "phoneNumber": "6789012345",
+    "user": {
+      "email": "sarah.miller@example.com"
+    }
+  },
+  {
+    "firstName": "David",
+    "lastName": "Moore",
+    "phoneNumber": "7890123456",
+    "user": {
+      "email": "david.moore@example.com"
+    }
+  },
+  {
+    "firstName": "Laura",
+    "lastName": "Taylor",
+    "phoneNumber": "8901234567",
+    "user": {
+      "email": "laura.taylor@example.com"
+    }
+  },
+  {
+    "firstName": "William",
+    "lastName": "Anderson",
+    "phoneNumber": "9012345678",
+    "user": {
+      "email": "william.anderson@example.com"
+    }
+  },
+  {
+    "firstName": "Olivia",
+    "lastName": "Thomas",
+    "phoneNumber": "0123456789",
+    "user": {
+      "email": "olivia.thomas@example.com"
+    }
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "email": "harentsoa@example.com",
+    "password": "12345678",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "jane.doe@example.com",
+    "password": "password123",
+    "role": {
+      "name": "ROLE_ADMIN"
+    }
+  },
+  {
+    "email": "john.smith@example.com",
+    "password": "johnsmith2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "alice.johnson@example.com",
+    "password": "alice1234",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "robert.brown@example.com",
+    "password": "robert2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "emily.davis@example.com",
+    "password": "emily2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "michael.wilson@example.com",
+    "password": "michael2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "sarah.miller@example.com",
+    "password": "sarah2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "david.moore@example.com",
+    "password": "david2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "laura.taylor@example.com",
+    "password": "laura2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "william.anderson@example.com",
+    "password": "william2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "olivia.thomas@example.com",
+    "password": "olivia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "james.jackson@example.com",
+    "password": "james2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "charlotte.white@example.com",
+    "password": "charlotte2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "henry.harris@example.com",
+    "password": "henry2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "sophia.martin@example.com",
+    "password": "sophia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "charles.lee@example.com",
+    "password": "charles2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "mia.clark@example.com",
+    "password": "mia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "jackson.king@example.com",
+    "password": "jackson2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "amelia.baker@example.com",
+    "password": "amelia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "daniel.wright@example.com",
+    "password": "daniel2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "isabella.scott@example.com",
+    "password": "isabella2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "lucas.green@example.com",
+    "password": "lucas2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "ava.adams@example.com",
+    "password": "ava2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "mason.thompson@example.com",
+    "password": "mason2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "lily.hill@example.com",
+    "password": "lily2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "logan.rodriguez@example.com",
+    "password": "logan2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "zoe.lewis@example.com",
+    "password": "zoe2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "sebastian.walker@example.com",
+    "password": "sebastian2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "chloe.hall@example.com",
+    "password": "chloe2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "aiden.young@example.com",
+    "password": "aiden2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "emma.allen@example.com",
+    "password": "emma2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "noah.lopez@example.com",
+    "password": "noah2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "grace.harris@example.com",
+    "password": "grace2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "oliver.clark@example.com",
+    "password": "oliver2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "scarlett.lewis@example.com",
+    "password": "scarlett2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "elijah.robinson@example.com",
+    "password": "elijah2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "madison.walker@example.com",
+    "password": "madison2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "ethan.martinez@example.com",
+    "password": "ethan2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "ella.hall@example.com",
+    "password": "ella2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "alexander.moore@example.com",
+    "password": "alexander2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "sofia.king@example.com",
+    "password": "sofia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "jacob.johnson@example.com",
+    "password": "jacob2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "avery.brown@example.com",
+    "password": "avery2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "lucas.jones@example.com",
+    "password": "lucas2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "mia.miller@example.com",
+    "password": "mia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "jackson.davis@example.com",
+    "password": "jackson2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  },
+  {
+    "email": "amelia.anderson@example.com",
+    "password": "amelia2023",
+    "role": {
+      "name": "ROLE_USER"
+    }
+  }
+]

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class TeacherServiceImpl implements TeacherService {
@@ -30,5 +31,11 @@ public class TeacherServiceImpl implements TeacherService {
                 user,new ArrayList<>());
         Teacher savedTeacher = teacherRepository.save(teacher);
         return Mapper.teacherToResponseDto(teacher);
+    }
+
+    @Override
+    public List<TeacherResponseDto> getAllTeacher() {
+        List<Teacher> teachers=  teacherRepository.findAll();
+        return Mapper.teacherToResponseDtos(teachers);
     }
 }

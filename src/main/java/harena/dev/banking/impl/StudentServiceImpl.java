@@ -3,8 +3,10 @@ package harena.dev.banking.impl;
 import harena.dev.banking.dto.Mapper;
 import harena.dev.banking.dto.requestDto.StudentRequestDto;
 import harena.dev.banking.dto.responseDto.StudentResponseDto;
+import harena.dev.banking.entity.Course;
 import harena.dev.banking.entity.Student;
 import harena.dev.banking.entity.User;
+import harena.dev.banking.repository.CourseRepository;
 import harena.dev.banking.repository.StudentRepository;
 import harena.dev.banking.repository.UserRepository;
 import harena.dev.banking.service.StudentService;
@@ -22,6 +24,8 @@ public class StudentServiceImpl implements StudentService {
     private StudentRepository studentRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private CourseRepository courseRepository;
 
     @Override
     public StudentResponseDto createStudent(StudentRequestDto studentRequestDto) {
@@ -43,6 +47,14 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentResponseDto> getAllStundets() {
         List<Student> students = studentRepository.findAll();
         return Mapper.studentToResponseDtos(students);
+    }
+
+    @Override
+    public List<StudentResponseDto> getStudentNotInCourse(Long courseId) {
+        Course course = courseRepository.findById(courseId).orElseThrow(()->new RuntimeException("Course With Id "+courseId+" Not found"));
+        List<Student> studentList = studentRepository.findStudentsNotInCourse(course);
+
+        return Mapper.studentToResponseDtos(studentList);
     }
 
 

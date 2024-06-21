@@ -40,7 +40,12 @@ public class Mapper {
         courseResponseDto.setDescription(course.getDescription());
         courseResponseDto.setDuration(course.getDuration());
         courseResponseDto.setTeacherName(course.getTeacher().getFirstName()+" "+course.getTeacher().getLastName());
-        courseResponseDto.setStudents(course.getStudentList().stream().map(Student::getFirstName).collect(Collectors.toList()));
+        courseResponseDto.setStudents(
+                course.getStudentList().stream()
+                        .map(student -> student.getFirstName() + " " + student.getLastName())
+                        .collect(Collectors.toList())
+        );
+
         return courseResponseDto;
     }
 
@@ -60,6 +65,7 @@ public class Mapper {
         studentResponseDto.setFirstName(student.getFirstName());
         studentResponseDto.setLastName(student.getLastName());
         studentResponseDto.setLevel(student.getLevel());
+        studentResponseDto.setEmail(student.getUser().getEmail());
         studentResponseDto.setUserId(student.getUser().getId());
         studentResponseDto.setCourse(
                 student.getCourseList().stream()
