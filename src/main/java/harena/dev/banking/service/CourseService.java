@@ -12,7 +12,7 @@ public interface CourseService {
     CourseResponseDto createCourse(CourseRequestDto courseRequestDto);
     List<CourseResponseDto> getAllCourse();
     CourseResponseDto getCourseByID(Long id);
-
+    String deleteCourse(Long courseId);
     CourseResponseDto addStudent(Map<String,Object> courseAndStudentIds);
-
+    List<CourseResponseDto> getCourseNotInStudent(Long studentId);
 }

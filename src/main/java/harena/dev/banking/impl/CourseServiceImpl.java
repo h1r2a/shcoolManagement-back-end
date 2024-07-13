@@ -6,7 +6,6 @@ import harena.dev.banking.dto.responseDto.CourseResponseDto;
 import harena.dev.banking.entity.Course;
 import harena.dev.banking.entity.Student;
 import harena.dev.banking.entity.Teacher;
-import harena.dev.banking.entity.User;
 import harena.dev.banking.repository.CourseRepository;
 import harena.dev.banking.repository.StudentRepository;
 import harena.dev.banking.repository.TeacherRepository;
@@ -46,6 +45,7 @@ public class CourseServiceImpl implements CourseService {
         course = courseRepository.findById(id).orElseThrow(()->new RuntimeException("Course not Found"));
         return Mapper.courseToResponseDto(course);
     }
+
 
 
 
@@ -116,6 +116,18 @@ public class CourseServiceImpl implements CourseService {
         return Mapper.courseToResponseDto(courseSaved);
     }
 
+    @Override
+    public List<CourseResponseDto> getCourseNotInStudent(Long studentId) {
+        Student student = studentRepository.findById(studentId).orElseThrow(()->new RuntimeException("Student not found for id: "+studentId));
+        List<Course> courseList = courseRepository.findCourseNotInCourseList(student);
+        return Mapper.courseToResponseDtos(courseList);
+    }
 
 
+    @Override
+    public String deleteCourse(Long courseId) {
+        Course course = courseRepository.findById(courseId).orElseThrow(()->new RuntimeException("Course not found"));
+        courseRepository.delete(course);
+        return course.getName() +" has been deleted";
+    }
 }

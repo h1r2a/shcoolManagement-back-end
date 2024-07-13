@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
+
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/etudiant")
@@ -26,7 +28,7 @@ public class StudentController {
 
     @GetMapping
     public ResponseEntity<Object> getAllStudent(){
-        List<StudentResponseDto> studentResponseDtos = studentService.getAllStundets();
+        List<StudentResponseDto> studentResponseDtos = studentService.getAllStudents();
         return new ResponseEntity<>(studentResponseDtos,HttpStatus.OK);
     }
 
@@ -40,6 +42,12 @@ public class StudentController {
     public ResponseEntity<Object> getStudentNotInCourse(@PathVariable Long courseId){
         List<StudentResponseDto> studentList = studentService.getStudentNotInCourse(courseId);
         return ResponseEntity.ok().body(studentList);
+    }
+
+    @PostMapping("/subscribeToCourses")
+    public  ResponseEntity<Object> subscribeStudentToCourses(@RequestBody Map<String,Object> body){
+        StudentResponseDto studentResponseDto = studentService.subscribeStudentToCourses(body);
+        return  ResponseEntity.ok().body(studentResponseDto);
     }
 
 }

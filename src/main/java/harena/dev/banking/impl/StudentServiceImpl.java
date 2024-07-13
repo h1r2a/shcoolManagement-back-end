@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -44,7 +45,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<StudentResponseDto> getAllStundets() {
+    public List<StudentResponseDto> getAllStudents() {
         List<Student> students = studentRepository.findAll();
         return Mapper.studentToResponseDtos(students);
     }
@@ -55,6 +56,36 @@ public class StudentServiceImpl implements StudentService {
         List<Student> studentList = studentRepository.findStudentsNotInCourse(course);
 
         return Mapper.studentToResponseDtos(studentList);
+    }
+
+    @Override
+    public StudentResponseDto subscribeStudentToCourses(Map<String, Object> studentAndCourseIds) {
+        Long studentId =((Number) studentAndCourseIds.get("studentId")).longValue();
+        Student student = studentRepository.findById(studentId).orElseThrow(()->new RuntimeException("Student not found for id "+studentId));
+        List<Long> courseIds = ((List<?>) studentAndCourseIds.get("courseIds"))
+                .stream()
+                .map(number ->((Number) number).longValue())
+                .collect(Collectors.toList());
+        List<Course> courseList = new ArrayList<>();
+        for (Long courseId : courseIds){
+            Course course =  courseRepository.findById(courseId)
+                    .orElseThrow(()->new RuntimeException("course not found for id"+courseId));
+            courseList.add(course);
+        }
+
+        if(!courseList.isEmpty()){
+            for (Course course:courseList){
+                if(!student.getCourseList().contains(course)){
+                    student.getCourseList().add(course);
+                    course.getStudentList().add(student);
+                }
+            }
+        }
+
+        Student savedStudent = studentRepository.save(student);
+
+        
+        return Mapper.studentToResponseDto(savedStudent);
     }
 
 

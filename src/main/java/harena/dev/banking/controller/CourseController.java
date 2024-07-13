@@ -24,7 +24,6 @@ public class CourseController {
     private CourseService courseService;
 
     @PostMapping
-    @CustomRole({"ROLE_ADMIN"})
     public ResponseEntity<Object> createCourse(@RequestBody CourseRequestDto courseRequestDto) {
         CourseResponseDto course = courseService.createCourse(courseRequestDto);
         return new ResponseEntity<>(course, HttpStatus.CREATED);
@@ -61,6 +60,12 @@ public class CourseController {
         return ResponseEntity.ok(idList);
     }
 
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Object> deleteCourse(@PathVariable Long id){
+        String deletedMessage = courseService.deleteCourse(id);
+        return ResponseEntity.ok().body(deletedMessage);
+    }
 
 
 }
